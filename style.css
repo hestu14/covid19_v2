@@ -1,0 +1,32 @@
+body, html {
+    margin : 10px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 30%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: lightblue;
+    overflow-x: hidden;
+    padding-top: 20px;
+    float: left;
+}
+
+.sidenav #judul-sidenav {
+    font-size: 4 rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.sidenav #indonesia-all, #indonesia-provinsi{
+    font-size: 3 rem;
+}
+
+.container {
+    clear: both;
+    width: 70%;
+    float: right;
+}
