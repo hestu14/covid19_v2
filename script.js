@@ -14,10 +14,10 @@ $.ajax({url: "https://kawalcovid19.harippe.id/api/summary", success: function(re
 
     var perawatan = result.activeCare.value;
 
-    $("#terjangkit").html("Positif: " +positif + " orang");
-    $("#sembuh").html("Sembuh: " +sembuh + " orang");
-    $("#meninggal").html("Meninggal: " +meninggal + " orang");
-    $("#perawatan").html("Perawatan: " +perawatan + " orang");
+    $("#terjangkit").html(positif);
+    $("#sembuh").html(sembuh);
+    $("#meninggal").html(meninggal);
+    $("#perawatan").html(perawatan);
 
 
     var d = new Date();
@@ -44,7 +44,7 @@ $.ajax({url: "https://kawalcovid19.harippe.id/api/summary", success: function(re
 
 
 const get_provinsi = document.getElementById('indonesia-provinsi');
-const tabelprovinsi = document.getElementById('row-2');
+const tabelprovinsi = document.getElementById('rincian');
 
 get_provinsi.addEventListener('click', generateProvinsi);
 
@@ -61,53 +61,42 @@ const result = await provinsiRes.json();
 // console.log(result);
 
 tabelprovinsi.innerHTML = 
-            result.data[0].provinsi+ " : " + result.data[0].kasusPosi + " orang<br>" +
-            result.data[1].provinsi+ " : " + result.data[1].kasusPosi + " orang<br>" +
-            result.data[2].provinsi+ " : " + result.data[2].kasusPosi + " orang<br>" +
-            result.data[3].provinsi+ " : " + result.data[3].kasusPosi + " orang<br>" +
-            result.data[4].provinsi+ " : " + result.data[4].kasusPosi + " orang<br>" +
-            result.data[5].provinsi+ " : " + result.data[5].kasusPosi + " orang<br>" +
-            result.data[6].provinsi+ " : " + result.data[6].kasusPosi + " orang<br>" +
-            result.data[7].provinsi+ " : " + result.data[7].kasusPosi + " orang<br>" +
-            result.data[8].provinsi+ " : " + result.data[8].kasusPosi + " orang<br>" +
-            result.data[9].provinsi+ " : " + result.data[9].kasusPosi + " orang<br>" +
-            result.data[10].provinsi+ " : " + result.data[10].kasusPosi + " orang<br>" +
-            result.data[11].provinsi+ " : " + result.data[11].kasusPosi + " orang<br>" +
-            result.data[12].provinsi+ " : " + result.data[12].kasusPosi + " orang<br>" +
-            result.data[13].provinsi+ " : " + result.data[13].kasusPosi + " orang<br>" +
-            result.data[14].provinsi+ " : " + result.data[14].kasusPosi + " orang<br>" +
-            result.data[15].provinsi+ " : " + result.data[15].kasusPosi + " orang<br>" +
-            result.data[16].provinsi+ " : " + result.data[16].kasusPosi + " orang<br>" +
-            result.data[17].provinsi+ " : " + result.data[17].kasusPosi + " orang<br>" +
-            result.data[18].provinsi+ " : " + result.data[18].kasusPosi + " orang<br>" +
-            result.data[19].provinsi+ " : " + result.data[19].kasusPosi + " orang<br>" +
-            result.data[20].provinsi+ " : " + result.data[20].kasusPosi + " orang<br>" +
-            result.data[21].provinsi+ " : " + result.data[21].kasusPosi + " orang<br>" +
-            result.data[22].provinsi+ " : " + result.data[22].kasusPosi + " orang<br>" +
-            result.data[23].provinsi+ " : " + result.data[23].kasusPosi + " orang<br>" +
-            result.data[24].provinsi+ " : " + result.data[24].kasusPosi + " orang<br>" +
-            result.data[25].provinsi+ " : " + result.data[25].kasusPosi + " orang<br>" +
-            result.data[26].provinsi+ " : " + result.data[26].kasusPosi + " orang<br>" +
-            result.data[27].provinsi+ " : " + result.data[27].kasusPosi + " orang<br>" +
-            result.data[28].provinsi+ " : " + result.data[28].kasusPosi + " orang<br>" +
-            result.data[29].provinsi+ " : " + result.data[29].kasusPosi + " orang<br>" +
-            result.data[30].provinsi+ " : " + result.data[30].kasusPosi + " orang<br>" +
-            result.data[31].provinsi+ " : " + result.data[31].kasusPosi + " orang<br>" +
-            result.data[32].provinsi+ " : " + result.data[32].kasusPosi + " orang<br>" +
-            result.data[33].provinsi+ " : " + result.data[33].kasusPosi + " orang<br>" +
-            result.data[34].provinsi+ " : " + result.data[34].kasusPosi + " orang<br>";
-        // )        
+                "<tr><td>" + result.data[0].provinsi + "</td><td>" + result.data[0].kasusPosi + "</td><td>" + result.data[0].kasusSemb + "</td><td>" + result.data[0].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[1].provinsi + "</td><td>" + result.data[1].kasusPosi + "</td><td>" + result.data[1].kasusSemb + "</td><td>" + result.data[1].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[2].provinsi + "</td><td>" + result.data[2].kasusPosi + "</td><td>" + result.data[2].kasusSemb + "</td><td>" + result.data[2].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[3].provinsi + "</td><td>" + result.data[3].kasusPosi + "</td><td>" + result.data[3].kasusSemb + "</td><td>" + result.data[3].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[4].provinsi + "</td><td>" + result.data[4].kasusPosi + "</td><td>" + result.data[4].kasusSemb + "</td><td>" + result.data[4].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[5].provinsi + "</td><td>" + result.data[5].kasusPosi + "</td><td>" + result.data[5].kasusSemb + "</td><td>" + result.data[5].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[6].provinsi + "</td><td>" + result.data[6].kasusPosi + "</td><td>" + result.data[6].kasusSemb + "</td><td>" + result.data[6].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[7].provinsi + "</td><td>" + result.data[7].kasusPosi + "</td><td>" + result.data[7].kasusSemb + "</td><td>" + result.data[7].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[8].provinsi + "</td><td>" + result.data[8].kasusPosi + "</td><td>" + result.data[8].kasusSemb + "</td><td>" + result.data[8].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[9].provinsi + "</td><td>" + result.data[9].kasusPosi + "</td><td>" + result.data[9].kasusSemb + "</td><td>" + result.data[9].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[10].provinsi + "</td><td>" + result.data[10].kasusPosi + "</td><td>" + result.data[10].kasusSemb + "</td><td>" + result.data[10].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[11].provinsi + "</td><td>" + result.data[11].kasusPosi + "</td><td>" + result.data[11].kasusSemb + "</td><td>" + result.data[11].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[12].provinsi + "</td><td>" + result.data[12].kasusPosi + "</td><td>" + result.data[12].kasusSemb + "</td><td>" + result.data[12].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[13].provinsi + "</td><td>" + result.data[13].kasusPosi + "</td><td>" + result.data[13].kasusSemb + "</td><td>" + result.data[13].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[14].provinsi + "</td><td>" + result.data[14].kasusPosi + "</td><td>" + result.data[14].kasusSemb + "</td><td>" + result.data[14].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[15].provinsi + "</td><td>" + result.data[15].kasusPosi + "</td><td>" + result.data[15].kasusSemb + "</td><td>" + result.data[15].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[16].provinsi + "</td><td>" + result.data[16].kasusPosi + "</td><td>" + result.data[16].kasusSemb + "</td><td>" + result.data[16].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[17].provinsi + "</td><td>" + result.data[17].kasusPosi + "</td><td>" + result.data[17].kasusSemb + "</td><td>" + result.data[17].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[18].provinsi + "</td><td>" + result.data[18].kasusPosi + "</td><td>" + result.data[18].kasusSemb + "</td><td>" + result.data[18].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[19].provinsi + "</td><td>" + result.data[19].kasusPosi + "</td><td>" + result.data[19].kasusSemb + "</td><td>" + result.data[19].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[20].provinsi + "</td><td>" + result.data[20].kasusPosi + "</td><td>" + result.data[20].kasusSemb + "</td><td>" + result.data[20].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[21].provinsi + "</td><td>" + result.data[21].kasusPosi + "</td><td>" + result.data[21].kasusSemb + "</td><td>" + result.data[21].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[22].provinsi + "</td><td>" + result.data[22].kasusPosi + "</td><td>" + result.data[22].kasusSemb + "</td><td>" + result.data[22].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[23].provinsi + "</td><td>" + result.data[23].kasusPosi + "</td><td>" + result.data[23].kasusSemb + "</td><td>" + result.data[23].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[24].provinsi + "</td><td>" + result.data[24].kasusPosi + "</td><td>" + result.data[24].kasusSemb + "</td><td>" + result.data[24].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[25].provinsi + "</td><td>" + result.data[25].kasusPosi + "</td><td>" + result.data[25].kasusSemb + "</td><td>" + result.data[25].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[26].provinsi + "</td><td>" + result.data[26].kasusPosi + "</td><td>" + result.data[26].kasusSemb + "</td><td>" + result.data[26].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[27].provinsi + "</td><td>" + result.data[27].kasusPosi + "</td><td>" + result.data[27].kasusSemb + "</td><td>" + result.data[27].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[28].provinsi + "</td><td>" + result.data[28].kasusPosi + "</td><td>" + result.data[28].kasusSemb + "</td><td>" + result.data[28].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[29].provinsi + "</td><td>" + result.data[29].kasusPosi + "</td><td>" + result.data[29].kasusSemb + "</td><td>" + result.data[29].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[30].provinsi + "</td><td>" + result.data[30].kasusPosi + "</td><td>" + result.data[30].kasusSemb + "</td><td>" + result.data[30].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[31].provinsi + "</td><td>" + result.data[31].kasusPosi + "</td><td>" + result.data[31].kasusSemb + "</td><td>" + result.data[31].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[32].provinsi + "</td><td>" + result.data[32].kasusPosi + "</td><td>" + result.data[32].kasusSemb + "</td><td>" + result.data[32].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[33].provinsi + "</td><td>" + result.data[33].kasusPosi + "</td><td>" + result.data[33].kasusSemb + "</td><td>" + result.data[33].kasusMeni + "</td></tr>" +
+                "<tr><td>" + result.data[34].provinsi + "</td><td>" + result.data[34].kasusPosi + "</td><td>" + result.data[34].kasusSemb + "</td><td>" + result.data[34].kasusMeni + "</td></tr>" 
 }
-
-// $(document).ready(function() {
-// $.ajax({url: "https://api.kawalcorona.com/indonesia/provinsi/", success: function(result){
-
-//     var provinsi = result[0].data.provinsi;
-//     var kasus_pos = result[0].data.provinsi.Kasus_Posi;
-
-//     $(".row2").html(provinsi + " : " + kasus_pos);
-// });
-// })
 
 $(document).ready(function(){
     $('.row-2').hide();
