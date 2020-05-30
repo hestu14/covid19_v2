@@ -30,3 +30,8 @@ body, html {
     width: 70%;
     float: right;
 }
+
+.row-1 img {
+    max-width: 60%;
+    height: auto;
+}
