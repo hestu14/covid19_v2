@@ -1,58 +1,137 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <!-- Required meta tags -->
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-        <link rel="stylesheet" type="text/css" href="style.css">
-        
-        <!-- Optional JavaScript -->
-        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
 
-        <title>COVID-19 v2</title>
+  <title>COVID-19 v2</title>
 
-      </head>
+</head>
+
 <body>
-    <div class="sidenav">
-        <p id="judul-sidenav">STATISTIK COVID-19 DI INDONESIA</p>
-        <br>
-        <center>
-        <button type="button" class="btn btn-primary" id="indonesia-all">KESELURUHAN</button>
-        <br>
-        <br>
-        <button type="button" class="btn btn-primary" id="indonesia-provinsi">PER PROVINSI</button>
-        <br>
-        <br>
-        <p>
-          UPDATE TANGGAL : <span id="update_tanggal"></span>
-        </p>
+  <div class="sidenav">
+    <p id="judul-sidenav">STATISTIK COVID-19 DI INDONESIA</p>
+    <br>
+    <center>
+      <button type="button" class="btn btn-primary" id="indonesia-all">KESELURUHAN</button>
+      <br>
+      <br>
+      <button type="button" class="btn btn-primary" id="indonesia-provinsi">PER PROVINSI</button>
+      <br>
+      <br>
+      <p>
+        UPDATE TANGGAL : <span id="update_tanggal"></span>
+      </p>
+    </center>
+  </div>
+
+  <div class="container">
+    <div class="row-0">
+      <center>
+        <div id="judul"></div>
       </center>
     </div>
+    <div class="row-1">
+      <center>
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/238/face-with-thermometer_1f912.png" class="card-img" alt="positif">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Positif</h5>
+                <h2 class="card-text" id="terjangkit"></h2>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <div class="container">
-        <div class="row-0">
-        <center><div id="judul"></div></center>
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/238/smiling-face-with-open-mouth_1f603.png" class="card-img" alt="sembuh">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Sembuh</h5>
+                <h2 class="card-text" id="sembuh"></h2>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="row-1">
-          <p id ="terjangkit"></p>
-          <p id ="sembuh"></p>
-          <p id ="meninggal"></p>
-          <p id ="perawatan"></p>
+
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/238/white-frowning-face_2639.png" class="card-img" alt="meninggal">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Meninggal</h5>
+                <h2 class="card-text" id="meninggal"></h2>
+              </div>
+            </div>
+          </div>
         </div>
-        <div class="row-2" id="row-2">
-          
+
+        <div class="card mb-3" style="max-width: 540px;">
+          <div class="row no-gutters">
+            <div class="col-md-4">
+              <img src="https://emojipedia-us.s3.dualstack.us-west-1.amazonaws.com/thumbs/120/whatsapp/238/face-with-medical-mask_1f637.png" class="card-img" alt="perawatan">
+            </div>
+            <div class="col-md-8">
+              <div class="card-body">
+                <h5 class="card-title">Perawatan</h5>
+                <h2 class="card-text" id="perawatan"></h2>
+              </div>
+            </div>
+          </div>
         </div>
+      </center>
 
     </div>
+    <div class="row-2">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">Provinsi</th>
+            <th scope="col">Kasus Positif</th>
+            <th scope="col">Sembuh</th>
+            <th scope="col">Meninggal</th>
+          </tr>
+        </thead>
+        <tbody id="rincian">
+        </tbody>
+      </table>
+    </div>
 
-    <script src="script.js"></script>
+
+
+  </div>
+
+  <script src="script.js"></script>
 </body>
+
 </html>
