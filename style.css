@@ -48,4 +48,8 @@ body, html {
         float: right;
         margin-top: 275px;
     }
+    
+    .row-2 {
+        font-size: 0.8rem;
+    }
 }
