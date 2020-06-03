@@ -4,7 +4,7 @@ body, html {
 
 .sidenav {
     height: 100%;
-    width: 30%;
+    width: 25%;
     position: fixed;
     z-index: 1;
     top: 0;
@@ -37,19 +37,38 @@ body, html {
     height: auto;
 }
 
+#indonesia-all {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#indonesia-provinsi {
+    margin-bottom: 20px;
+}
+
 @media (max-width: 576px) {
     .sidenav {
-        height: 275px;
+        height: 230px;
         width: 100%;
     }
     .container {
         clear: both;
         width: 100%;
         float: right;
-        margin-top: 275px;
+        margin-top: 230px;
+        padding-left: 0px;
     }
-    
+
     .row-2 {
         font-size: 0.8rem;
+    }
+
+    #indonesia-all {
+        margin-top: 0px;
+        margin-bottom: 2px;
+    }
+    
+    #indonesia-provinsi {
+        margin-bottom: 2px;
     }
 }
