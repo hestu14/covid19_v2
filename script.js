@@ -94,8 +94,8 @@ tabelprovinsi.innerHTML =
                 "<tr><td>" + result.data[30].provinsi + "</td><td>" + result.data[30].kasusPosi + "</td><td>" + result.data[30].kasusSemb + "</td><td>" + result.data[30].kasusMeni + "</td></tr>" +
                 "<tr><td>" + result.data[31].provinsi + "</td><td>" + result.data[31].kasusPosi + "</td><td>" + result.data[31].kasusSemb + "</td><td>" + result.data[31].kasusMeni + "</td></tr>" +
                 "<tr><td>" + result.data[32].provinsi + "</td><td>" + result.data[32].kasusPosi + "</td><td>" + result.data[32].kasusSemb + "</td><td>" + result.data[32].kasusMeni + "</td></tr>" +
-//                 "<tr><td>" + result.data[33].provinsi + "</td><td>" + result.data[33].kasusPosi + "</td><td>" + result.data[33].kasusSemb + "</td><td>" + result.data[33].kasusMeni + "</td></tr>" +
-                "<tr><td>" + result.data[34].provinsi + "</td><td>" + result.data[34].kasusPosi + "</td><td>" + result.data[34].kasusSemb + "</td><td>" + result.data[34].kasusMeni + "</td></tr>" 
+                "<tr><td>" + result.data[33].provinsi + "</td><td>" + result.data[33].kasusPosi + "</td><td>" + result.data[33].kasusSemb + "</td><td>" + result.data[33].kasusMeni + "</td></tr>" 
+//                 "<tr><td>" + result.data[34].provinsi + "</td><td>" + result.data[34].kasusPosi + "</td><td>" + result.data[34].kasusSemb + "</td><td>" + result.data[34].kasusMeni + "</td></tr>" 
 }
 
 $(document).ready(function(){
