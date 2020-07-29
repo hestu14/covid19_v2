@@ -46,11 +46,21 @@ body, html {
     margin-bottom: 20px;
 }
 
+.btn {
+    width: 50%;
+}
+
 @media (max-width: 576px) {
     .sidenav {
         height: 230px;
         width: 100%;
+        overflow: hidden;
     }
+
+    .btn {
+        margin-top: 5px;
+    }
+
     .container {
         clear: both;
         width: 100%;
