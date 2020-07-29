@@ -1,18 +1,9 @@
 $(document).ready(function() {
-$.ajax({url: "https://kawalcovid19.harippe.id/api/summary", success: function(result){
-    var positif =  result.confirmed.value;
-    // var positif2 = positif.split(",");
-    // var positif3 = positif2.join("");
-
-    var sembuh = result.recovered.value;
-    // var sembuh2 = sembuh.split(",");
-    // var sembuh3 = sembuh2.join("");
-
-    var meninggal = result.deaths.value;
-    // var meninggal2 = meninggal.split(",");
-    // var meninggal3 = meninggal2.join("");
-
-    var perawatan = result.activeCare.value;
+$.ajax({url: "https://indonesia-covid-19.mathdro.id/api", success: function(result){
+    var positif =  result.jumlahKasus.toLocaleString("de-DE");
+    var sembuh = result.sembuh.toLocaleString("de-DE");
+    var meninggal = result.meninggal.toLocaleString("de-DE");
+    var perawatan = result.perawatan.toLocaleString("de-DE");
 
     $("#terjangkit").html(positif);
     $("#sembuh").html(sembuh);
