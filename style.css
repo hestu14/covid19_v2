@@ -50,6 +50,18 @@ body, html {
     width: 50%;
 }
 
+.table {
+    text-align: center;
+}
+
+#thead-provinsi {
+    text-align: left;
+}
+
+#tdata-provinsi {
+    text-align: left;
+}
+
 @media (max-width: 576px) {
     .sidenav {
         height: 230px;
